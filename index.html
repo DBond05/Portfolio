@@ -75,30 +75,53 @@
         max-height: 50px;
 
       }
-      #navbuttontoggler{
-        display:none;
-      }
-     
-
+	  
       #banner {
         display:none;
         background-image: linear-gradient(to right, rgb(147, 201, 232), rgba(117, 217, 251, 0.9), white, rgba(117, 217, 251, 0.9), rgb(147, 201, 232));
       }
-      @media(min-width:768px){
-
+	  
+	  /* mobile screen adjustments */
+    
+	
+		/* min-width is for desktop */
+      @media(min-width:767.98px){
+		
+	    #navbuttontoggler {
+			display: none;
+		}
+		#navbarButtons {
+			display: flex !important;
+		}
         #banner{
           display:block;
         }
        
       }
-      @media (max-width: 576px) {
+	  
+	  /* max-width is mobile view */
+     @media (max-width: 767.98px) {
  
-  #navbuttontoggler{
-        display:block;
-      }
-      #navbarButtons{
-        display:hidden;
-      }   
+		.btn {
+			width: 100%;
+			margin-bottom: 0.5rem;
+		}
+
+  
+		h1, h2, h3 {
+			font-size: 1.25rem;
+			}
+			
+		#navbuttontoggler {
+			display: block;
+			margin-bottom: 1rem;
+		  }
+
+		#navbar {
+			padding: 1rem;
+			}
+	}
+      
 }
 
     </style>
@@ -107,23 +130,24 @@
 <body>
   <div class="container-fluid">
   <div class="row">
-    <nav class="p-5 col-md-3 d-flex flex-column  border " id="navbar">
-      <button id="navbuttontoggler" class="navbar-toggler align-self-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarButtons"
-      aria-controls="navbarButtons" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="col-12 col-md-3 border p-3" id="navbar">
+
+      <button id="navbuttontoggler" class="navbar-toggler align-self-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarButtons"  aria-controls="navbarButtons" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fa-solid fa-bars"></i>
     </button>
-  
+		
       <div class="row justify-content-center">
-       
+       <div class="d-flex flex-column align-items-center">
         <a class="navbar-brand align-self-center" href="#">
           <h3 class="text-light">Donna Bond</h3>
           <img src="images/profile.png" class="border border-light rounded-circle img-fluid ratio ratio-1x1"
             id="profileImg" alt="Profile Image">
         </a>
-
+		</div>
         
 
-        <div class="navbar flex-column row" id="navbarButtons">
+       <div class="collapse navbar-collapse show flex-column row" id="navbarButtons">
+	   
           <button class="btn btn-secondary navbar-btn m-2 shadow" onClick="window.location.href='#sk'">Skills</button>
           <button class="btn btn-dark navbar-btn m-2 shadow" onClick="window.location.href='#ed'">Education</button>
           <button class="btn btn-primary navbar-btn m-2 shadow" onClick="window.location.href='#wh'">Work
@@ -285,7 +309,7 @@
             <li> Symantec endpoint / Norton</li>
             <li> Windows defender/ Windows Firewall</li>
             <li>Microsoft Security Essentials</li>
-            <li>MacAfee</li>
+            <li>Mcafee</li>
             <li>AVG</li>
           </ul>
           <li class="no-li-icon"><button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#hw"
@@ -396,40 +420,44 @@
       <br>
       <h3 id="wh" class="text-info"> Work History</h3>
       <br>
-      <div class=row>
-        <div class=col>
+      <div class="row mb-3">
+		<div class="d-none d-md-block col-md-2"></div>
+        <div class="d-none d-md-block col-md-3 fw-bold">
           <h5> Company </h5>
         </div>
-        <div class=col>
+        <div class="d-none d-md-block col-md-3 fw-bold">
           <h5> Position </h5>
         </div>
-        <div class=col>
+        <div class="d-none d-md-block col-md-3 fw-bold text-md-end">
           <h5> Date</h5>
         </div>
 
       </div>
+	  <!-- Work History container -
+	  DO NOT DELETE accordian -
+	  dynamically filled by JS -->
       <div id="accordion">
       </div>
       <br>
       <p><a href="#top"> Back to top.</a></p>
       <br>
       <h3 id="sa" class="text-info"> Samples</h3>
-
-      <div class="card" style="width: 40rem;">
+	<div class="row"> 
+      <div class="card h-100 w-100" >
         <!-- Carousel -->
         <div id="carousel1" class="carousel slide">
           <div class="carousel-inner">
             <div class="carousel-item ">
-              <img src="images/tetris1.png" class="w-100" alt="Image 1">
+              <img src="images/tetris1.png" class="w-100 img-fluid" alt="Image 1">
             </div>
             <div class="carousel-item">
-              <img src="images/tetris2.png" class="d-block w-100" alt="Image 2">
+              <img src="images/tetris2.png" class="d-block w-100 img-fluid" alt="Image 2">
             </div>
             <div class="carousel-item">
-              <img src="images/tetris3.png" class="d-block w-100" alt="Image 3">
+              <img src="images/tetris3.png" class="d-block w-100 img-fluid" alt="Image 3">
             </div>
             <div class="carousel-item active">
-              <img src="images/tetris4.png" class="d-block w-100" alt="Image 4">
+              <img src="images/tetris4.png" class="d-block w-100 img-fluid" alt="Image 4">
             </div>
           </div>
           <!-- Carousel controls -->
@@ -455,25 +483,27 @@
           <p> Check out the source code on GitHub <a href="https://github.com/DBond05/TetrisTypeGame">Here</a> </p>
         </div>
       </div>
+	  </div>
       <br>
-      <div class="card " style="width: 40rem;">
+     <div class="row"> 
+      <div class="card h-100 w-100" >
         <!-- Carousel -->
         <div id="carousel2" class="carousel carousel-dark slide">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="images/bugtracker1.png" class="w-100" alt="Image 1">
+              <img src="images/bugtracker1.png" class="w-100 img-fluid" alt="Image 1">
             </div>
             <div class="carousel-item">
-              <img src="images/bugtracker2.png" class="d-block w-100" alt="Image 2">
+              <img src="images/bugtracker2.png" class="d-block w-100 img-fluid" alt="Image 2">
             </div>
             <div class="carousel-item">
-              <img src="images/bugtracker3.png" class="d-block w-100" alt="Image 3">
+              <img src="images/bugtracker3.png" class="d-block w-100 img-fluid" alt="Image 3">
             </div>
             <div class="carousel-item">
-              <img src="images/bugtracker4.png" class="d-block w-100" alt="Image 4">
+              <img src="images/bugtracker4.png" class="d-block w-100 img-fluid" alt="Image 4">
             </div>
             <div class="carousel-item">
-              <img src="images/bugtracker5.png" class="d-block w-100" alt="Image 5">
+              <img src="images/bugtracker5.png" class="d-block w-100 img-fluid" alt="Image 5">
             </div>
           </div>
           <!-- Carousel controls -->
@@ -499,7 +529,7 @@
           <p> Check out the source code on GitHub <a href="https://github.com/DBond05/BugTracker">Here</a> </p>
         </div>
       </div>
-
+	</div>
 
       <br>
       <p><a href="#top"> Back to top.</a></p>
@@ -527,45 +557,46 @@
         <div class="tab-content" id="ex1-content">
           <div class="tab-pane fade show active p-3" id="tab1" role="tabpanel" aria-labelledby="tab1-btn">
 
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width:18rem">
+            <div class="row g-3">
+              <div class="col-12 col-md-6 ">
+                <div class="card h-100" >
                   <div class="card-header">
                     <img src="images/birthright.jpg" class="card-img-top rounded-circle" />
                   </div>
                   <div class="card-body">
                     <h6 class="card-title">Birth Right</h6>
-                    <p card-text> A fictitious story about the impact of every child-bearing aged female on the planet
+                    <p class="card-text"> A fictitious story about the impact of every child-bearing aged female on the planet
                       becoming pregnant in a relatively short time. It is published on Kindle vella and still in
                       progress. Kindle Vella is free for the first ten episodes.</p>
                   </div>
                   <div class="card-footer">
-				  <p> Kindle Vella was discontinued 4/2023, I am in in the process of creating an alternative experience. </P> 
+				  <p> Kindle Vella was discontinued 4/2025, I am in in the process of creating an alternative experience. </P> 
                    <!--  <P> Please click <a href="https://www.amazon.com/kindle-vella/story/B0DBGYWP1J"
                         target="_blank">here</a>
                       to read. </p> -->
                   </div>
                 </div>
               </div>
-              <div class="card" style="width:18rem">
+			  <div class="col-12 col-md-6 ">
+              <div class="card h-100" >
                 <div class="card-header">
                   <img src="images/crushed.jpg" class="card-img-top rounded-circle" />
                 </div>
                 <div class="card-body">
                   <h6 class="card-title">Crushed</h6>
-                  <p card-text> A collection of short stories describing the experiences of the impoverished as they
+                  <p class="card-text"> A collection of short stories describing the experiences of the impoverished as they
                     interact with people in positions of authority. It is published on Kindle vella and still in
                     progress. Kindle Vella is free for the first ten episodes.</p>
                 </div>
                 <div class="card-footer">
-				<p> Kindle Vella was discontinued 4/2023, I am in in the process of creating an alternative experience. </P> 
+				<p> Kindle Vella was discontinued 4/2025, I am in in the process of creating an alternative experience. </P> 
                   <!-- <P> Please click <a href="https://www.amazon.com/kindle-vella/story/B0DF6QW32J"
                       target="_blank">here</a> to read. </p>-->
                 </div>
               </div>
             </div>
           </div>
-
+		</div>
           <div class="tab-pane fade p-3" id="tab2" role="tabpanel" aria-labelledby="tab2-btn">
 
             <div class="row">
@@ -606,16 +637,20 @@
           </div>
           <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-btn">
             <div class="row m-2">
-              <P class="col m-5">
+             
+              <div class="d-flex flex-row ">
+                <img src="images/pets3.jfif" class="img-fluid  w-25" alt="My dog, Teedo and his cat Shadow, snuggling in a chair" title = "Teedo and Shadow">
+                <img src="images/pets4.png" class="img-fluid  w-25" alt = "Bubba is really happy, a Great Pyranese mix with a big grin" title = "Bubba" >
+				
+                <img src="images/pets1.jfif" class="img-fluid w-25" alt = "Dominique Hen sitting on nest with several fluffy yellow one day old chicks, seen through the bars of her protective cage" title = "Henrietta's first brood" >
+                <img src="images/pets2.jpg" class="img-fluid  w-25" alt= " my pet raccoon, Rocket" title = "Rocket">
+              </div>
+			  <div>
+			   <P class="col m-5">
                 I enjoy caring for plants and animals.<br> I currently have three dogs and one cat. The cat's name is shadow because he is black and he follows me around everywhere. He actually belongs to my red heeler. My red heeler's name is Tedo and the great pyranese mix is named Bubba. I also have a Chihuahua named Ellie. 
 				<br> I have twenty-four chickens. I don't really consider all of them pets, although I do put a lot of time and care into their wellbeing, and I enjoy interacting with them daily.
               </p>
-              <div class="col">
-                <img src="images/pets3.jfif" class="img-fluid  w-50" alt="My dog, Teedo and his cat Shadow, snuggling in a chair" title = "Teedo and Shadow">
-                <img src="images/pets4.png" class="img-fluid  w-50" alt = "Bubba is really happy, a Great Pyranese mix with a big grin" title = "Bubba" >
-                <img src="images/pets1.jfif" class="img-fluid w-50" alt = "Dominique Hen sitting on nest with several fluffy yellow one day old chicks, seen through the bars of her protective cage" title = "Henrietta's first brood" >
-                <img src="images/pets2.jpg" class="img-fluid  w-50" alt= " my pet raccoon, Rocket" title = "Rocket">
-              </div>
+			  </div>
 
 
             </div>
@@ -669,14 +704,14 @@
     <div class="accordian-header card-header row">
       
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wh${index}" aria-expanded="false" aria-controls="wh${index}">
-		<div class="col p-2">
-          <img src="${job.logo}" class="rounded float-start me-3">
-		  <h6>${job.company}</h6>
-       </div>
-      <div class="col p-2">
-        <h6>${job.title}</h6>
+		<div class="col-3 col-md-2 text-center">
+          <img src="${job.logo}" class="img-fluid rounded float-start me-3" style="max-height: 48px;" alt="${job.company} logo" title="${job.company}">
+		 </div>
+      <div class="col-0 col-md-3 p-2">
+	  <h6 class ="mb-1 fw-bold d-none d-md-block">${job.company}</h6>
       </div>
-      <div class="col p-2">
+	  <div class="col-3 col-md-4"><h6>${job.title}</h6></div>
+      <div class="col-3 align-self-end p-2">
         <h6>${job.date}</h6>
       </div>
 	  </button>
