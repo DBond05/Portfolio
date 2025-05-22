@@ -14,7 +14,7 @@
       :root {
         --background-color: #ffffff;
         --text-color: #000000;
-
+		--link-color: #0d6efd;
 
         /* Bootstrap primary */
       }
@@ -23,6 +23,7 @@
       body.dark-mode {
         --background-color: rgb(94, 99, 108);
         --text-color: white;
+		--link-color: #66b2ff;
 
       }
 
@@ -86,6 +87,14 @@
 	
 		/* min-width is for desktop */
       @media(min-width:767.98px){
+	  
+	  /* custom width and center 
+	  applied to carousel cards */
+		.cw-90{
+		width: 90% !important;
+		margin-left: auto;
+		margin-right: auto;
+		}
 		
 	    #navbuttontoggler {
 			display: none;
@@ -128,7 +137,7 @@
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid" id ="top">
   <div class="row">
     <nav class="col-12 col-md-3 border p-3" id="navbar">
 
@@ -168,7 +177,7 @@
         <label class="form-check-label" for="flexSwitchCheckDefault">Mode</label>
       </div>
       <div id="banner" class="m-5 border border-secondary p-3 bg-primary opacity-75 text-center shadow-lg rounded">
-        <h1 id="top" class="text-dark"> Software Developer</h1>
+        <h1 class="text-dark"> Software Developer</h1>
       </div>
       <h3> About Me</h3>
       <p>I am a dedicated software developer with a Bachelor's degree in Software Development from Western Governors University, earned in February 2020. I have recent experience in Android and full-stack development, complemented by a robust background in IT. I am adept at meeting or exceeding SLAs, deadlines, and goals.
@@ -433,17 +442,18 @@
         </div>
 
       </div>
-	  <!-- Work History container -
-	  DO NOT DELETE accordian -
-	  dynamically filled by JS -->
+	  <!--NOTE TO SELF - 
+	  Work History container -
+	  DO NOT DELETE accordian div dummy -
+	  it's dynamically filled by JS -->
       <div id="accordion">
       </div>
       <br>
       <p><a href="#top"> Back to top.</a></p>
       <br>
       <h3 id="sa" class="text-info"> Samples</h3>
-	<div class="row"> 
-      <div class="card h-100 w-100" >
+	<div class="row "> 
+      <div class="card h-100 w-100 cw-90 " >
         <!-- Carousel -->
         <div id="carousel1" class="carousel slide">
           <div class="carousel-inner">
@@ -486,7 +496,7 @@
 	  </div>
       <br>
      <div class="row"> 
-      <div class="card h-100 w-100" >
+      <div class="card h-100 w-100 cw-90" >
         <!-- Carousel -->
         <div id="carousel2" class="carousel carousel-dark slide">
           <div class="carousel-inner">
