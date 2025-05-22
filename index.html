@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> Donna Bond </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" type="image/png">
+  <link rel="icon" href="images/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+    <style>
+      :root {
+        --background-color: #ffffff;
+        --text-color: #000000;
+
+
+        /* Bootstrap primary */
+      }
+
+      /* Dark mode */
+      body.dark-mode {
+        --background-color: rgb(94, 99, 108);
+        --text-color: white;
+
+      }
+
+      #navbar {
+        min-height: 600px;
+        background-color: rgba(117, 217, 251, 0.9);
+      }
+
+      body {
+      
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      #profileImg {
+        background-color: var(--background-color);
+        max-width:245px ;
+        max-height:305px ;
+        min-width:152px;
+        max-width:190px ;
+      }
+
+      .btn-sm {
+        border: none
+      }
+
+      .no-li-icon {
+        list-style-type: none;
+      }
+
+      table,
+      th,
+      td {
+        border: 2px solid white;
+        border-collapse: collapse;
+
+      }
+
+      th,
+      td {
+        background-color: rgba(117, 217, 251, 0.9);
+        padding: 10px;
+      }
+
+      tbody tr:hover {
+        color: white;
+      }
+
+      button img {
+        max-height: 50px;
+
+      }
+      #navbuttontoggler{
+        display:none;
+      }
+     
+
+      #banner {
+        display:none;
+        background-image: linear-gradient(to right, rgb(147, 201, 232), rgba(117, 217, 251, 0.9), white, rgba(117, 217, 251, 0.9), rgb(147, 201, 232));
+      }
+      @media(min-width:768px){
+
+        #banner{
+          display:block;
+        }
+       
+      }
+      @media (max-width: 576px) {
+ 
+  #navbuttontoggler{
+        display:block;
+      }
+      #navbarButtons{
+        display:hidden;
+      }   
+}
+
+    </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+  <div class="row">
+    <nav class="p-5 col-md-3 d-flex flex-column  border " id="navbar">
+      <button id="navbuttontoggler" class="navbar-toggler align-self-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarButtons"
+      aria-controls="navbarButtons" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  
+      <div class="row justify-content-center">
+       
+        <a class="navbar-brand align-self-center" href="#">
+          <h3 class="text-light">Donna Bond</h3>
+          <img src="images/profile.png" class="border border-light rounded-circle img-fluid ratio ratio-1x1"
+            id="profileImg" alt="Profile Image">
+        </a>
+
+        
+
+        <div class="navbar flex-column row" id="navbarButtons">
+          <button class="btn btn-secondary navbar-btn m-2 shadow" onClick="window.location.href='#sk'">Skills</button>
+          <button class="btn btn-dark navbar-btn m-2 shadow" onClick="window.location.href='#ed'">Education</button>
+          <button class="btn btn-primary navbar-btn m-2 shadow" onClick="window.location.href='#wh'">Work
+            History</button>
+          <button class="btn btn-danger navbar-btn m-2 shadow text-white"
+            onClick="window.location.href='#sa'">Samples</button>
+          <button class="btn btn-warning navbar-btn m-2 shadow text-white" onClick="window.location.href='#hb'">
+            Hobbies</button>
+          <a href="resume.docx" download="resume">
+            <button class="btn btn-success navbar-btn m-2 shadow text-white">Download Resume</button>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class=" col-md-9" id="page">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+        <label class="form-check-label" for="flexSwitchCheckDefault">Mode</label>
+      </div>
+      <div id="banner" class="m-5 border border-secondary p-3 bg-primary opacity-75 text-center shadow-lg rounded">
+        <h1 id="top" class="text-dark"> Software Developer</h1>
+      </div>
+      <h3> About Me</h3>
+      <p>I am a dedicated software developer with a Bachelor's degree in Software Development from Western Governors University, earned in February 2020. I have recent experience in Android and full-stack development, complemented by a robust background in IT. I am adept at meeting or exceeding SLAs, deadlines, and goals.
+      </p>
+      <br>
+      <br>
+      <h3 id="sk" class="text-info"> Skills</h3>
+      <h6>Soft Skills</h6>
+      <p>I excel in customer service by simplifying complex ideas into clear, understandable terms for diverse
+        audiences. I’m skilled in de-escalating difficult situations and adept at negotiation within team environments.
+        In supervisory roles, I employ a servant leadership approach, empowering others to reach their potential. I
+        enjoy the challenges of learning new technologies and mentoring others.</p>
+      <br>
+      <h6> <button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#devskill" data-bs-toggle="collapse">
+          <i class="fas fa-chevron-down"></i> </button>Software Development Skills</h6>
+      <div id="devskill" class="collapse">
+        <ul>
+		<li class="no-li-icon"><button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#arch"
+              data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button>Architecture /  Methodologies</li>
+          <ul id="arch" class="collapse">
+		  <li>SOLID / DRY / KISS</li>
+		  <li>MVC, MVP, MVVM</li>
+		  <li>CLEAN Architecture</li>
+		  <li>Agile</li>
+		  <li>SAFe</li>
+		  <li>Waterfall</li>
+		  </ul>
+          <li class="no-li-icon"><button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#lang"
+              data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button>Languages</li>
+          <ul id="lang" class="collapse">
+            <li>Java 7 - Java 17</li>
+			<li>Kotlin</li>
+            <li>Pega 23 Constellation</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SQL</li>
+          </ul>
+          <li class="no-li-icon"><button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#framew"
+              data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button>Frameworks / Libraries</li>
+          <ul id="framew" class="collapse">
+            <li>Spring MVC </li>
+			<li>Spring Boot</li>
+			<li>Jetpack Compose</li>
+			<li>Hilt</li>
+			<li>Retrofit</li>
+            <li>BootStrap</li>
+            <li>Angular</li>
+            <li>Maven</li>
+            <li>Pega</li>
+          </ul>
+          <li class="no-li-icon"><button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#enplt"
+              data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button>Environments / Platforms</li>
+          <ul id="enplt" class="collapse">
+		    <li>Android Studio</li>
+			<li>IntelliJ IDEA</li>
+			<li>Visual Studio Code</li>
+			<li>Eclipse</li>
+			<li>Spring Tool Suite (STS)</li>
+			<li>NetBeans</li>
+		    <li>Firebase</li>
+            <li>JavaFX / FXML</li>
+            <li>Java SE / EE </li>
+          </ul>
+          <li class="no-li-icon"><button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#tools"
+              data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button>Tools</li>
+          <ul id="tools" class="collapse">
+            <li>Git, GitHub, GitLab</li>
+			<li>Gradle</li>
+			<li>Logcat</li>
+            <li>Postman</li>
+            <li>Splunk</li>
+            <li>Swagger</li>
+          </ul>
+          <li class="no-li-icon"><button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#dbms"
+              data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button>DBMS</li>
+          <ul id="dbms" class="collapse">
+            <li>MySQL</li>
+            <li>PostgreSQL</li>
+            <li>Oracle</li>
+			<li>Room</li>
+          </ul>
+          <li class="no-li-icon"><button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#devops"
+              data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button>DevOps / Cloud Technologies</li>
+          <ul id="devops" class="collapse">
+            <li>AWS
+            <ul>
+              <li>EC2</li>
+              <li>Lambda</li>
+              <li>S3</li>
+              <li>RDS</li>
+              <li>Elastic Beanstalk</li>
+            </ul>
+			</li>
+            <li>Jenkins</li>
+
+          </ul>
+          <li class="no-li-icon"><button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#misc"
+              data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button>Misc.</li>
+          <ul id="misc" class="collapse">
+            <li>Apache FreeMarker Templates</li>
+            <li>Log4J</li>
+            <li>Mockito, Junit</li>
+          </ul>
+        </ul>
+        <br>
+      </div>
+      <h6><button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#techskill" data-bs-toggle="collapse">
+          <i class="fas fa-chevron-down"></i> </button>Technical Support Skills</h6>
+      <div id="techskill" class="collapse">
+        <ul>
+          <li class="no-li-icon"><button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#os"
+              data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button>Operating Systems</li>
+          <ul id="os" class="collapse">
+            <li> Windows 95 - 11</li>
+            <li> Windows Server 2008/2012</li>
+            <li>AS400</li>
+            <li>Mac OS X10.2 - 10.6</li>
+            <li>Android 1.5 - 6x</li>
+            <li>Blackberry OS 10</li>
+          </ul>
+          <li class="no-li-icon"><button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#oob"
+              data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button>Out of Box</li>
+          <ul id="oob" class="collapse">
+            <li> Microsoft office 2000 – 2016</li>
+            <li> Snag-it</li>
+            <li>Quicken</li>
+            <li>Lotus Notes</li>
+            <li>Browsers - Safari / IE / Chrome / Firefox / Edge</li>
+            <li>Lync/ Skype/ Teams/ Discord</li>
+          </ul>
+
+          <li class="no-li-icon"> <button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#security"
+              data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button> Security Software</li>
+          <ul id="security" class="collapse">
+            <li> Symantec endpoint / Norton</li>
+            <li> Windows defender/ Windows Firewall</li>
+            <li>Microsoft Security Essentials</li>
+            <li>MacAfee</li>
+            <li>AVG</li>
+          </ul>
+          <li class="no-li-icon"><button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#hw"
+              data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button>Hardware Support</li>
+          <ul id="hw" class="collapse">
+            <li> Laptops/desktops (Dell, HP, Lenovo etc..)</li>
+            <li>Various computer pheriphrials (ie Keyboard, mouse, web cameras, etc) </li>
+            <li> Cisco routers / switches/ firewalls</li>
+            <li>Cisco IP Telephony</li>
+            <li>Avaya</li>
+            <li>WAP</li>
+            <li>SoHo WIFI routers / switches (various brands)</li>
+            <li>Printers</li>
+            <li>Commercial multifunctional office devices (Xerox, HP, Brother)</li>
+          </ul>
+          <li class="no-li-icon"><button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#st"
+              data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button>Support Tools</li>
+          <ul id="st" class="collapse">
+            <li>Remote tools</li>
+            <ul>
+              <li>LogMeInRescue</li>
+              <li>Bomgar</li>
+              <li>Remote Desktop</li>
+            </ul>
+            <li>Conferencing tools </li>
+            <ul>
+              <li>Lync</li>
+              <li>Teams</li>
+              <li>Adobe Connect</li>
+              <li>GoToMeeting</li>
+              <li>Discord</li>
+            </ul>
+            <li>ITSM </li>
+            <ul>
+              <li>Remedy</li>
+              <li>HPSM</li>
+              <li>Service Now</li>
+              <li>Jira</li>
+            </ul>
+
+            <li> Oracle </li>
+          </ul>
+          <li class="no-li-icon"> <button class="btn btn-sm btn-outline-secondary me-2" data-bs-target="#proto"
+              data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button>Network Protocols and Technologies
+          </li>
+          <ul id="proto" class="collapse">
+            <li> Cisco Meraki MDM, Fusion UDM</li>
+            <li> IPConfig, Ping, Tracert</li>
+            <li> DNS, DHCP, NAT, VPN, VLAN </li>
+            <li> WLAN, LAN, Ethernet, FIOS, ADSL, VOIP</li>
+          </ul>
+
+        </ul>
+      </div>
+      <br>
+      <p><a href="#top"> Back to top.</a></p>
+      <br>
+      <h3 id="ed"> Education</h3>
+      <h5> Degrees</h5>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Institution Name</th>
+            <th>Major</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bachelor</td>
+            <td>Western Governors University</td>
+            <td>Software Development</td>
+            <td>2020</td>
+          </tr>
+          <tr>
+            <td>Associate</td>
+            <td>Northeast Texas Community College</td>
+            <td>Computer Science / Computer Networking</td>
+            <td>2002</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h5> Certifications <button class="btn btn-sm btn-outline-secondary ms-2" data-bs-target="#certs"
+          data-bs-toggle="collapse"> <i class="fas fa-chevron-down"></i> </button> </h5>
+      <ul id="certs" class="collapse">
+        <li>2024: Pega CSA</li>
+        <li>2017: CompTIA Network+</li>
+        <li>2016: CompTIA Security+</li>
+        <li>2015: MTA Microsoft Server Fundamentals</li>
+        <li>2015: CIW Database Design Specialist</li>
+        <li>2015: MTA Database Fundamentals</li>
+        <li>2014: CompTIA A+</li>
+        <li>2014: CIW Web Design Specialist</li>
+        <li>2014: CIW JavaScript Specialist</li>
+        <li>2013: CIW Web Foundation Associate</li>
+        <li>2013: MCP (Microsoft certified professional)</li>
+        <ul>
+          <li>Exam-MTA Windows Operating Systems</li>
+          <li>Exam-MTA Networking Fundamentals</li>
+        </ul>
+        <li>2002: CCNA certification </li>
+
+      </ul>
+      <br>
+      <p><a href="#top"> Back to top.</a></p>
+      <br>
+      <h3 id="wh" class="text-info"> Work History</h3>
+      <br>
+      <div class=row>
+        <div class=col>
+          <h5> Company </h5>
+        </div>
+        <div class=col>
+          <h5> Position </h5>
+        </div>
+        <div class=col>
+          <h5> Date</h5>
+        </div>
+
+      </div>
+      <div id="accordion">
+      </div>
+      <br>
+      <p><a href="#top"> Back to top.</a></p>
+      <br>
+      <h3 id="sa" class="text-info"> Samples</h3>
+
+      <div class="card" style="width: 40rem;">
+        <!-- Carousel -->
+        <div id="carousel1" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item ">
+              <img src="images/tetris1.png" class="w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="images/tetris2.png" class="d-block w-100" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+              <img src="images/tetris3.png" class="d-block w-100" alt="Image 3">
+            </div>
+            <div class="carousel-item active">
+              <img src="images/tetris4.png" class="d-block w-100" alt="Image 4">
+            </div>
+          </div>
+          <!-- Carousel controls -->
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+        </div>
+
+        <!-- Card content -->
+        <div class="card-body">
+          <h6 class="card-title">Tetris Type Game</h6>
+          <p class="card-text">A simple JS game displayed with HTML and styled with CSS. I made this for my family for
+            Christmas. A customized profile is setup for each user.</p>
+        </div>
+        <!-- footer -->
+        <div class=" card-footer">
+          <p> Check out the source code on GitHub <a href="https://github.com/DBond05/TetrisTypeGame">Here</a> </p>
+        </div>
+      </div>
+      <br>
+      <div class="card " style="width: 40rem;">
+        <!-- Carousel -->
+        <div id="carousel2" class="carousel carousel-dark slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/bugtracker1.png" class="w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="images/bugtracker2.png" class="d-block w-100" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+              <img src="images/bugtracker3.png" class="d-block w-100" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+              <img src="images/bugtracker4.png" class="d-block w-100" alt="Image 4">
+            </div>
+            <div class="carousel-item">
+              <img src="images/bugtracker5.png" class="d-block w-100" alt="Image 5">
+            </div>
+          </div>
+          <!-- Carousel controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <!-- Card content -->
+        <div class="card-body">
+          <h6 class="card-title">Bug Tracker tool</h6>
+          <p class="card-text">Application to track problems and resolutions. Backend is JavaSE 17, Spring Boot with JPA
+            and Maven for version control. Front end is done in Angular version 16.1.3
+            with bootstrap 4. Data base is MySql and APIs are REST.</p>
+        </div>
+        <!-- footer -->
+        <div class="card-footer">
+          <p> Check out the source code on GitHub <a href="https://github.com/DBond05/BugTracker">Here</a> </p>
+        </div>
+      </div>
+
+
+      <br>
+      <p><a href="#top"> Back to top.</a></p>
+      <br>
+      <div>
+        <h3 id="hb" class="text-warning"> Hobbies</h3>
+        <p> There are a lot of things that I enjoy doing but I'm not particularly talented at. These are what I consider
+          my hobbies</p>
+        <div class="nav nav-tabs" id="ex1" role="tablist">
+
+          <button class="nav-link active" id="tab1-btn" data-bs-toggle="tab" data-bs-target="#tab1" type="button"
+            role="tab" aria-controls="tab1" aria-selected="true">Writing</button>
+
+          <button class="nav-link" id="tab2-btn" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab"
+            aria-controls="tab2" aria-selected="false">Photography</button>
+
+          <button class="nav-link" id="tab3-btn" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab"
+            aria-controls="tab3" aria-selected="false">Crafts</button>
+
+
+          <button class="nav-link" id="tab4-btn" data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab"
+            aria-controls="tab4" aria-selected="false">Pets</button>
+
+        </div>
+        <div class="tab-content" id="ex1-content">
+          <div class="tab-pane fade show active p-3" id="tab1" role="tabpanel" aria-labelledby="tab1-btn">
+
+            <div class="row">
+              <div class="col">
+                <div class="card" style="width:18rem">
+                  <div class="card-header">
+                    <img src="images/birthright.jpg" class="card-img-top rounded-circle" />
+                  </div>
+                  <div class="card-body">
+                    <h6 class="card-title">Birth Right</h6>
+                    <p card-text> A fictitious story about the impact of every child-bearing aged female on the planet
+                      becoming pregnant in a relatively short time. It is published on Kindle vella and still in
+                      progress. Kindle Vella is free for the first ten episodes.</p>
+                  </div>
+                  <div class="card-footer">
+				  <p> Kindle Vella was discontinued 4/2023, I am in in the process of creating an alternative experience. </P> 
+                   <!--  <P> Please click <a href="https://www.amazon.com/kindle-vella/story/B0DBGYWP1J"
+                        target="_blank">here</a>
+                      to read. </p> -->
+                  </div>
+                </div>
+              </div>
+              <div class="card" style="width:18rem">
+                <div class="card-header">
+                  <img src="images/crushed.jpg" class="card-img-top rounded-circle" />
+                </div>
+                <div class="card-body">
+                  <h6 class="card-title">Crushed</h6>
+                  <p card-text> A collection of short stories describing the experiences of the impoverished as they
+                    interact with people in positions of authority. It is published on Kindle vella and still in
+                    progress. Kindle Vella is free for the first ten episodes.</p>
+                </div>
+                <div class="card-footer">
+				<p> Kindle Vella was discontinued 4/2023, I am in in the process of creating an alternative experience. </P> 
+                  <!-- <P> Please click <a href="https://www.amazon.com/kindle-vella/story/B0DF6QW32J"
+                      target="_blank">here</a> to read. </p>-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade p-3" id="tab2" role="tabpanel" aria-labelledby="tab2-btn">
+
+            <div class="row">
+              <img class=" col w-25 img-fluid" src="images/hobby1.jpg"> <img src="images/hobby5.jpg"
+                class="col w-25 img-fluid"> <img src="images/hobby3.png" class="w-25 col img-fluid">
+            </div>
+
+            <div class="row">
+              <img src="images/hobby7.png" class="col w-25 img-fluid"> <img src="images/hobby9.jpg"
+                class="col w-25 img-fluid"> <img src="images/hobby6.jpg" class="col w-25 img-fluid">
+            </div>
+
+            <div class="row">
+              <img src="images/hobby8.jpg" class="col w-25 img-fluid"> <img src="images/hobby10.jfif"
+                class="col w-25 img-fluid"> <img src="images/hobby2.jpg" class="col w-25 img-fluid">
+            </div>
+			 <div class="row">
+              <img src="images/hobby12.png" class="col w-25 img-fluid"> <img src="images/hobby11.png"
+                class="col w-25 img-fluid"> <img src="images/hobby3.jpg" class="col w-25 img-fluid">
+            </div>
+          </div>
+
+          <div class="tab-pane fade p-3" id="tab3" role="tabpanel" aria-labelledby="tab3-btn">
+            <div class="row">
+              <p class="col"> I like to make things. I like to crochet and knit. I made the throw pictured on the back
+                of the sofa. I like to build useful things. <img class="img-fluid img-thumbnail w-25 ms-3 float-end"
+                  src="images/crafts2.jpg"
+                  alt="A handmade crocheted light blue throw on a dark blue couch and my two year old grandson photo bombing.">
+                I made a chicken coop so the chickens would have a place to roost out of the weather and lay their eggs.
+                <img class="img-fluid img-thumbnail w-25 m-3 float-start" src="images/crafts1.jpg"
+                  alt="light blue homemade shelf with assorted canisters"> I have made dog houses and cat towers. I made
+                the shelf pictured. <br> <br> I also like to repurpose things that would normally be thrown away into
+                something useful. I reuse animal feed sacks instead of buying trash can liners. I once made a guest
+                mattress out of a busted air mattress stuffed with plastic grocery bags. I love shopping at Joanne's,
+                Hobby Lobby, Home Depot and Goodwill.
+              </p>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-btn">
+            <div class="row m-2">
+              <P class="col m-5">
+                I enjoy caring for plants and animals.<br> I currently have three dogs and one cat. The cat's name is shadow because he is black and he follows me around everywhere. He actually belongs to my red heeler. My red heeler's name is Tedo and the great pyranese mix is named Bubba. I also have a Chihuahua named Ellie. 
+				<br> I have twenty-four chickens. I don't really consider all of them pets, although I do put a lot of time and care into their wellbeing, and I enjoy interacting with them daily.
+              </p>
+              <div class="col">
+                <img src="images/pets3.jfif" class="img-fluid  w-50" alt="My dog, Teedo and his cat Shadow, snuggling in a chair" title = "Teedo and Shadow">
+                <img src="images/pets4.png" class="img-fluid  w-50" alt = "Bubba is really happy, a Great Pyranese mix with a big grin" title = "Bubba" >
+                <img src="images/pets1.jfif" class="img-fluid w-50" alt = "Dominique Hen sitting on nest with several fluffy yellow one day old chicks, seen through the bars of her protective cage" title = "Henrietta's first brood" >
+                <img src="images/pets2.jpg" class="img-fluid  w-50" alt= " my pet raccoon, Rocket" title = "Rocket">
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <p><a href="#top"> Back to top.</a></p>
+      <br>
+    </div>
+
+  </div>
+  </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const buttons = document.querySelectorAll('.btn-sm');
+    //array for work history
+    const jobs = [
+	{ logo: "images/techconsulting_logo.jpg", company: "Tech Consulting", title: "Android Developer", date: "03/2025 - 05/2025", description: "<p>Trained in Android Develoment. Worked on several internal projects. </p>" },
+      { logo: "images/remotasks_logo.jpg", company: "Outlier", title: "LLM Trainer", date: "04/2023 - present", description: "<p> This is part time contract work. Grading and/or correcting LLM responses that contain Java, JavaScript, Typescript, HTML, CSS, or SQL code. </p>" },
+      { logo: "images/revature.png", company: "Revature", title: "Full Stack Java / Pega Developer", date: "10/2023 – 7/2024", description: "<ul><li>Began as an unpaid intern, receiving training in Java/Javalin/Maven/Git/Postgres/Rest APIs.</li><li>Progressed to a paid position, training in Pega 23 Constellation, earning CSA certification.</li><li>Worked on multiple Pega projects.</li></ul>" },
+      { logo: "images/BB_logo.png", company: "Beck & Butler Industries", title: "Full Stack Developer", date: "07/2023 – 09/2023", description: "<p>	Contracted for a short-term project to build a web application for a startup construction business. Developed the backend and frontend structure and logic using Angular, Spring Boot, Java 17, Maven, Okta, Stripe, and MySQL.</p>" },
+      { logo: "images/infosys_logo.jpg", company: "Infosys Technologies Limited", title: "Senior Associate Developer", date: "03/2021 – 05/2023", description: "<ul> <li>Worked on multiple projects for a major telecommunications client using SAFe 5 methodology.</li><li>Developed products in Java 8, Spring Boot, and Angular utilizing Maven.</li><li>Responsible for completing assignments within allotted time, designing, developing, testing, and supporting the product.</li></ul>" },
+      { logo: "images/revature.png", company: "Revature", title: "Full Stack Software Developer", date: "10/2020 – 03/2021", description: "<p>I worked within an Agile team to Refactor existing Java / Angular application to implement Spring Boot, Spring Boot JPA. Designed, documented, and implemented new classes in Java 1.8, new components, and services in Angular 11. Updated unit tests, controller, and exception classes. We utilized AWS (EC2, S3, and RDS), Bootstrap, Jenkins, GIT, and JUnit. When my assignments were completed before the sprint's end, I assisted other teams in debugging minor issues.</p>" },
+      { logo: "images/kforce_logo.jpg", company: "K Force Inc.", title: "Level II Computer Technician", date: "01/2012 – 02/2020", description: "<p>I worked on short term to midterm IT projects upgrading or deploying computer systems for state agencies. My role varied depending on the project, as a level II technician I have worked as onsite project manager, and technical lead when required. I can be deployed to sites as part of a team or alone, working with little or no supervision. </p>" },
+      { logo: "images/smart_logo.jpg", company: "Smartsource Inc.", title: "System Administrator/Deskside Support Technician", date: "01/2015- 12/2019", description: "<p> I worked on various accounts provding IT services. I was responsible for: <ul><li>Adding new Employees to Microsoft Exchange 360; provision equipment, domain accounts and permissions</li><li>Disable termed employees' domain accounts and access to systems</li><li>Resolve helpdesk tickets remotely via telephone, email or chat for end users company wide</li><li>Configure and ship replacement equipment</li><li>Maintain equipment inventory</li><li>Resolved break/fix issues by working with vendors to repair when warranty is active and by performing hardware component level repairs when equipment is out of warranty </li><li>Maintain deployment images</li><li>Provide deskside support for the physical offices for the state of Texas</li><li>Server management</li><li>Maintain, upgrade and deploy onsite network and VOIP equipment</li><li>Other tasks when assigned.</li></ul></p>" },
+      { logo: "images/Ebryit.jpg", company: "EbryIT", title: "Field Service Technician", date: "05/2015 – 03/2019", description: "<p>1099 Contract work for point of sale support. I performed hardware or software deployments, troubleshooting, repairs, and decommissions.</P>" },
+      { logo: "images/guideit_logo.jpg", company: "GuideIT", title: "Help Desk Technician II", date: "02/2019 – 09/2019", description: "<p>Provided remote support for a local bank’s employees. Duties included working tickets submitted by chat, email or inbound phone calls for troubleshooting, provisioning or access requests.  Escalating issues to the field or vendors when necessary. </p>" },
+      { logo: "images/xerox_logo.jpg", company: "Silver XIS Inc.", title: "Xerox Printer Maintenance Technician", date: "04/2016-01/2017", description: "<p>Maintain Xerox multifunction printers for HHSC, TxDot and DPS.  Perform troubleshooting, upgrades and maintenance. Order supplies and maintain adequate inventory.  Answer and resolve service calls. Meet or exceed all SLAs. </P>" },
+      { logo: "images/telenetwork.jpg", company: "Telenetwork", title: "DSL Technical Support Representative", date: "01/2016- 03/2016", description: "<p>Provided remote support for DSL internet connection and email to end users in a virtual inbound call center environment.</p>" },
+      { logo: "images/ng_logo.jpg", company: "Arco Service Corp", title: "IT Service Desk/Help Desk Representative", date: "02/2014 – 12/2014", description: "<p>Provided tier 1 technical support for employees and contractors for Northrup Grumman.</p>" },
+      { logo: "images/state_farm_logo.jpg", company: "Randstad Technologies Inc", title: "Help Desk Analyst", date: "05/2012 – 09/2013", description: "<p>Contractor for State Farm. Provided help desk support for agent offices.</P>" },
+      { logo: "images/fap_logo.png", company: "First American Payment Systems LP", title: "Point of Sale Technical Support", date: "03/2010 – 01/2012", description: "<p>While maintaining excellent customer service, I spoke with merchants on both Inbound and outbound calls to support the merchant's ability to process Credit/debit card payments, gift cards and checks.</p>" },
+      { logo: "images/att_logo.jpg", company: "Adino Inc", title: "Workforce Management", date: "03/2008 – 10/2009", description: " Responsible for managing the schedule and call flow for four major AT&T call centers. Analyse trending data hourly to predict call volume in real time. Data was then used to approve or deny paid time off, offer voluntary time off or to approve over time when the call volume required it." },
+      { logo: "images/aig_logo.jpg", company: "The Volt Technical Resources", title: "Help Desk Analyst II", date: "07/2007 - 11/2007", description: "<p> Internal help desk for AIG employees.  Support tier II help desk issues such as AD policy issues, VPN, UML issues. Etc.  Short term project to support end user while Help desk was being relocated overseas. </p>" },
+      { logo: "images/att_logo.jpg", company: "The Plus Group", title: "ADSL Tier II Technical Support", date: "12/2006 – 07/2007", description: "<p>Contractor for AT&T. Received escalated calls from Tier I technical support to resolve issues related to DSL connectivity.</p>" },
+      { logo: "images/verizon_logo.jpg", company: "Telvista Inc.", title: "ADSL Technical Support", date: "02/2005 - 12/2006", description: "<p>Provided technical support for Verizon ADSL customers; promoted to the Encore team for advanced support.</p>" }
+    ];
+
+    // Select the accordion element
+    const accordion = document.getElementById('accordion');
+
+    //create a card per job in array
+    jobs.forEach((job, index) => {
+      const accordionCard = document.createElement('div');
+      accordionCard.classList.add('accordion-item');
+      accordionCard.classList.add('card');
+
+      const accordionHeader = `
+    <div class="accordian-header card-header row">
+      
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wh${index}" aria-expanded="false" aria-controls="wh${index}">
+		<div class="col p-2">
+          <img src="${job.logo}" class="rounded float-start me-3">
+		  <h6>${job.company}</h6>
+       </div>
+      <div class="col p-2">
+        <h6>${job.title}</h6>
+      </div>
+      <div class="col p-2">
+        <h6>${job.date}</h6>
+      </div>
+	  </button>
+    </div>
+  `;
+
+      const accordionBody = `
+    <div id="wh${index}" class="accordion-collapse collapse" data-bs-parent="#accordion">
+      <div class="accordion-body card-body">
+        ${job.description}
+      </div>
+    </div>
+  `;
+
+      // Append the header and body to the card
+      accordionCard.innerHTML = accordionHeader + accordionBody;
+
+      // Append the card to the accordion
+      accordion.appendChild(accordionCard);
+    });
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const icon = button.querySelector('i');
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+        if(!icon.classList.contains('fa-solid fa-bars')){
+        if (isExpanded) {
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-chevron-up');
+        } else {
+          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-chevron-down');
+        }
+      }
+      });
+    });
+
+    //for toggling dark/light modes
+    const toggleSwitch = document.querySelector('#flexSwitchCheckDefault');
+    const page = document.querySelector('#page');
+    const currentTheme = localStorage.getItem('theme');
+
+    // Check if there's a saved theme preference
+    if (currentTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleSwitch.checked = true;
+    }
+    // Event listener for the toggle switch
+    toggleSwitch.addEventListener('change', function () {
+      if (toggleSwitch.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+  </script>
+</body>
+
+</html>
